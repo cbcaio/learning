@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <h1> Model-binding</h1>
+    <h1> {{ message }} </h1>
+    <input v-model="message">
+
+    <pre>
+        {{ $data | json }}
+    </pre>
+</div>
+
+
+
+<script src="vue.js"></script>
+
+<script>
+    new Vue({
+       el: '#app'
+        ,
+        data:{
+            message : 'Hello World'
+        }
+    });
+</script>
+
+</body>
+</html>

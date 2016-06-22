@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <h1> Regular Way - e.preventDefault() </h1>
+    <form action="example2.html" v-on:submit="handleIt1">
+       <button type="submit" >
+            Submit Me!
+        </button>
+    </form>
+
+    <h1> Nice Way - submit.prevent </h1>
+    <form action="example2.html" v-on:submit.prevent="handleIt2">
+        <button type="submit" >
+            Submit Me2!
+        </button>
+    </form>
+
+    <h1> Short Way - @submit.prevent </h1>
+    <form action="example2.html" @submit.prevent="handleIt2">
+        <button type="submit" >
+            Submit Me2!
+        </button>
+    </form>
+
+    <h1>Count button - @click event</h1>
+    <button type="submit" @click="updateCount">
+        Add 1 to Count! Count = {{ count }}
+    </button>
+    <button type="submit" @click="count += 1">
+        Add 1 to Count! Count = {{ count }}
+    </button>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+          count : 0
+        },
+        methods:{
+            handleIt1: function(e) {
+                alert('bla');
+                e.preventDefault();
+            },
+            handleIt2: function() {
+                alert('bla2');
+            },
+            updateCount: function() {
+                this.count += 1;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

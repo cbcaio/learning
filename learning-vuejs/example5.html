@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 5</title>
+</head>
+<body>
+
+<div id="app">
+    <h1> {{ fullName }} </h1>
+    <br><br>
+    <input type="text" v-model="first" placeholder="First Name">
+    <input type="text" v-model="last" placeholder="First Name">
+</div>
+
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            first: '',
+            last: ''
+        },
+        computed: {
+            fullName: function() {
+               return this.first + ' ' + this.last;
+            }
+
+        }
+    });
+</script>
+
+</body>
+</html>

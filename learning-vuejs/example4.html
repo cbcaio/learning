@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 4</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h1> Showing a new vue component</h1>
+    <hello></hello>
+
+    <counter subject="Likes"></counter>
+    <counter subject="Dislikes"></counter>
+</div>
+
+
+<template id="counter-template">
+    <h1>{{ subject }}</h1>
+
+    <button @click="count += 1">
+        {{ count }}
+    </button>
+</template>
+
+
+<script src="vue.js"></script>
+<script src="example4.js"></script>
+
+</body>
+</html>

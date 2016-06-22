@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 7</title>
+    <style>
+        .completed { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li :class="{ 'completed': task.completed }"
+            v-for="task in tasks"
+            @click="toggleCompletedFor(task)"
+        >
+            {{ task.body }}
+        </li>
+    </ul>
+</div>
+
+<script src="vue.js"></script>
+<script src="vue-ex7.js"></script>
+
+</body>
+</html>
