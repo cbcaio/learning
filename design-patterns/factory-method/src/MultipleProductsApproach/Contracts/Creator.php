@@ -4,7 +4,7 @@ namespace App\MultipleProductsApproach\Contracts;
 
 abstract class Creator
 {
-    protected abstract function factoryMethod(Product $product);
+    abstract protected function factoryMethod(Product $product);
 
     public function make($product)
     {

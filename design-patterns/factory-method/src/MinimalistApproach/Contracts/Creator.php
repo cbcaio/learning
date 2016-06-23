@@ -4,7 +4,7 @@ namespace App\MinimalistApproach\Contracts;
 
 abstract class Creator
 {
-    protected abstract function factoryMethod();
+    abstract protected function factoryMethod();
 
     public function startFactory()
     {
