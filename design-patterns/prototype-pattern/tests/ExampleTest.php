@@ -3,7 +3,7 @@
 class ExampleTest extends PHPUnit_Framework_TestCase
 {
     /** @test */
-    public function tests_minimalist_approach()
+    public function tests_example()
     {
         $data_from_somewhere = [
             'App\DynamicObjectNaming',
